@@ -16,9 +16,15 @@ A normal 3 or 4 wire can be connected to SDM 230 from their respective pins to a
 
 image1 and image 2 
 
- Do check [modbus_csv0.3.py](https://github.com/santoshkrishnanr/reading-values-from-SDM-230/blob/master/modbus_csv0.3.py) for the values to be read and written in csv log file
+* Do check [modbus_csv0.3.py](https://github.com/santoshkrishnanr/reading-values-from-SDM-230/blob/master/modbus_csv0.3.py) 
+  for the values to be read and written in csv log file
+ * keep inmind that the  port='/dev/ttyUSB0', baudrate=2400 and the baudrate has to be same in both SDM device and the program 
+ port can be check by 
+ ```
+ dmesg | grep tty
+ ```
  
- for the the program to read only values remove 
+ ** for the the program to read only values remove and not writing in csv 
  
 ```
 import csv
@@ -45,16 +51,16 @@ change the reister address in
 ```
 to its respective adress as shown below 
 ```
-( 'V', 0x00, '%6.2f' ), # Voltage [V]
-( 'Curr', 0x06, '%6.2f' ), # Current [A]
-( 'P[act]', 0x0c, '%6.0f' ), # Active Power [W]
-( 'P[app]', 0x12, '%6.0f' ), # Apparent Power  [W]
-( 'P[rea]', 0x18, '%6.0f' ), # Reactive Power [W]
-( 'PF', 0x1e, '%6.3f' ), # Power Factor [1]
-( 'Phi', 0x24, '%6.1f' ), # cos(Phi)? [1]
-( 'Freq', 0x46, '%6.2f' ), # Line Frequency [Hz]
-( 'W[act]', 0x0156, '%6.2f' ), # Energy [kWh]
-( 'W[rea]', 0x0158, '%6.2f' ) # Energy react [kvarh]
+( 'V', 0x00), # Voltage [V]
+( 'Curr', 0x06 ), # Current [A]
+( 'P[act]', 0x0c  ), # Active Power [W]
+( 'P[app]', 0x12 ), # Apparent Power  [W]
+( 'P[rea]', 0x18  ), # Reactive Power [W]
+( 'PF', 0x1e ), # Power Factor [1]
+( 'Phi', 0x24  ), # cos(Phi)? [1]
+( 'Freq', 0x46 ), # Line Frequency [Hz]
+( 'W[act]', 0x0156 ), # Energy [kWh]
+( 'W[rea]', 0x0158  ) # Energy react [kvarh]
 
 ```
 
@@ -64,8 +70,6 @@ to its respective adress as shown below
 
 * **Santosh Krishnan** - *Initial work* -
 
-
-## Acknowledgments
 
 * After the the values are read from the smart meter further calculation, ploting graph can be done 
 * happy coading !!
