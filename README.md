@@ -18,13 +18,13 @@ image1 and image 2
 
 * Do check [modbus_csv0.3.py](https://github.com/santoshkrishnanr/reading-values-from-SDM-230/blob/master/modbus_csv0.3.py) 
   for the values to be read and written in csv log file
- * keep inmind that the  port='/dev/ttyUSB0', baudrate=2400 and the baudrate has to be same in both SDM device and the program 
+ * keep in mind that the  port='/dev/ttyUSB0', baudrate=2400 and the baudrate has to be same in both SDM device and the program 
  port can be check by 
  ```
  dmesg | grep tty
  ```
  
- ** for the the program to read only values remove and not writing in csv 
+ ** for the the program to read only values and not writing in csv 
  
 ```
 import csv
