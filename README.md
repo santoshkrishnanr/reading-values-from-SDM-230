@@ -8,6 +8,7 @@ These instructions will help you do the connection required to read values from 
 ### Powering up the sdm230
 
 line and neutral wires towards the input and output side is connected as per the diagram shown
+(**Warning!! keep in mind its 230v AC)
 
 
 ![](https://github.com/santoshkrishnanr/reading-values-from-SDM-230/blob/master/sdm_wiring.png)
