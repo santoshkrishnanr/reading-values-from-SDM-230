@@ -15,7 +15,7 @@ line and neutral wires towards the input and output side is connected as per the
 ### Communicating wire 
 A normal 3 or 4 wire can be connected to SDM 230 from their respective pins to any serial RS485 converter like Digitus as shown below 
 
-image1 and image 2 
+![](https://github.com/santoshkrishnanr/reading-values-from-SDM-230/blob/master/sdm_modbus.jpeg) ![](https://github.com/santoshkrishnanr/reading-values-from-SDM-230/blob/master/digitus.jpeg)
 
 * Do check [modbus_csv0.3.py](https://github.com/santoshkrishnanr/reading-values-from-SDM-230/blob/master/modbus_csv0.3.py) 
   for the values to be read and written in csv log file
